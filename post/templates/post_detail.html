@@ -1,13 +1,29 @@
+{% extends 'nav_common.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
-<body>
-    {% for name in username %}
-        <h3>{{ name }}</h3>
-    {% endfor %}
 
+    {% block page_head %}
+        <link rel="stylesheet" href="{% url 'post:' %}">
+        {#        在子页面添加相关css文件#}
+    {% endblock %}
+</head>
+
+<body>
+{% for name in username %}
+    <h3>{{ name }}</h3>
+{% endfor %}
+
+
+{% block page_content %}
+    在子页面添加相关内容
+{% endblock %}
+
+
+{% block page_script %}
+    {#    在子页面添加相关js#}
+{% endblock %}
 </body>
 </html>
