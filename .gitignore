@@ -113,4 +113,4 @@ __pycache__
 *.log
 .venv
 medias/*
-
+.idea/workspace.xml
