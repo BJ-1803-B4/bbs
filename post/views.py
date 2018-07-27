@@ -8,4 +8,6 @@ def index(request):
 
 
 def post_detail(request):
-    return HttpResponse("帖子细节页面")
+    data = {"username": "lili"}
+    return render(request, "post_detail.html", context=data)
+    # return HttpResponse("帖子细节页面")
