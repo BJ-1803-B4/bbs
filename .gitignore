@@ -102,3 +102,15 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+
+
+# must do
+*.pyc
+*.sqlite3
+.idea
+__pycache__
+*.log
+.venv
+medias/*
+
