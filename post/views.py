@@ -6,7 +6,8 @@ def index(request):
 
 
 def post_detail(request):
-    data = {"username": "lili"}
+    list = ['a', 'b']
+    data = {"username": list}
     return render(request, "post_detail.html", context=data)
 
 
