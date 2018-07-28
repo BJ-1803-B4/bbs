@@ -114,3 +114,7 @@ __pycache__
 .venv
 medias/*
 
+
+
+.idea/workspace.xml
+
