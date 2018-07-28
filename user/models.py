@@ -23,5 +23,8 @@ class User(models.Model):
 
     objects = UserManager()
 
+    class Meta:
+        db_table = 'users'
+
 
 
