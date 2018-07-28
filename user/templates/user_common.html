@@ -1,0 +1,35 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'common/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'common/css/common.css' %}">
+    <title>
+        {% block page_title %}
+            {#            子页面标题#}
+        {% endblock %}
+    </title>
+
+    {% block page_head %}
+        {#        在子页面添加相关css文件#}
+    {% endblock %}
+</head>
+<body>
+
+<div id="container">
+
+    {% block page_content %}
+        在子页面添加相关内容
+    {% endblock %}
+</div>
+
+
+<script type="text/javascript" src="{% static 'common/js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'common/js/bootstrap.min.js' %}"></script>
+
+{% block page_script %}
+    {#    在子页面添加相关js#}
+{% endblock %}
+</body>
+</html>
