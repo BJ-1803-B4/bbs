@@ -1,5 +1,7 @@
 from django.db import models
 
+from user.models import User
+
 
 class PostManager(models.Manager):
     def all(self):
@@ -21,6 +23,30 @@ class Post(models.Model):
     content_str = models.TextField()
     is_delete = models.BooleanField(default=False)
 
-    # user = models.ForeignKey(User, on_delete=models.CASCADE)
-    
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
     objects = PostManager()
+
+
+# 帖子的评论
+class Comment(models.Model):
+    pass
+
+
+# 帖子评论的回复
+class Reply(models.Model):
+    pass
+
+
+# 用户对帖子的收藏点赞
+class UserPost(models.Model):
+    pass
+
+
+# 用户对帖子评论的回复
+class UserComment(models.Model):
+    pass
+
+
+
+
