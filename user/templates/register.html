@@ -10,24 +10,41 @@
 {% endblock %}
 
 {% block page_content %}
-    <div id="content">
-        <div id="register_form">
-            <form action="{% url 'register_handler' %}" method="POST">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label for="{{ form.username.id_for_label }}">Username</label>
-                    {{ form.username }}
-                </div>
-                <div class="form-group">
-                     <label for="{{ form.password.id_for_label }}">password</label>
-                    {{ form.password }}
-                </div>
-                <div class="form-group">
-                     <label for="{{ form.confirm_password.id_for_label }}">confirm_password</label>
-                    {{ form.confirm_password }}
-                </div>
-                <button type="button" class="btn btn-danger btn-block">确认注册</button>
-            </form>
+    <div id="bg_left">
+        <p id="logo"><a href="{% url 'index' %}">ASDC</a></p>
+        <p id="msg">成功的人是跟别人学习经验，失败的人只跟自己学习经验。</p>
+        <img src="{% static 'common/image/bg1.jpg' %}">
+    </div>
+    <div id="bg_right">
+        <a id="login" href="{% url 'login' %}">登录</a>
+        <div id="content">
+            <div id="register_title">欢迎注册</div>
+            <div id="register_form">
+                <form action="{% url 'register_handler' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="{{ form.username.id_for_label }}">用户名</label>
+                        {{ form.username }}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.password.id_for_label }}">密码</label>
+                        {{ form.password }}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.confirm_password.id_for_label }}">确认密码</label>
+                        {{ form.confirm_password }}
+                    </div>
+                    <button type="button" class="btn btn-danger btn-block">确认注册</button>
+                </form>
+            </div>
+            <div id="note">
+                <span><img style="width: 16px;height: 16px;" src="{% static 'common/image/already.png' %}"></span>
+                <span>我已仔细阅读并接受</span>
+                <span><a href="#">CSDN用户服务条款</a></span>
+                <br>
+                <br>
+                <span>京 ICP 证 09002463 号 | Copyright © 1999-2018, CSDN.NET, All Rights Reserved</span>
+            </div>
         </div>
     </div>
 {% endblock %}
