@@ -24,10 +24,10 @@ class Post(models.Model):
     title = models.CharField(max_length=50)
     cont_html = models.TextField()
     cont_str = models.TextField()
-    view_count = models.IntegerField()
-    like_count = models.IntegerField()
-    coll_count = models.IntegerField()
-    comm_count = models.IntegerField()
+    view_count = models.IntegerField(default=0)
+    like_count = models.IntegerField(default=0)
+    coll_count = models.IntegerField(default=0)
+    comm_count = models.IntegerField(default=0)
     is_delete = models.BooleanField(default=False)
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)  # on_delete=models.CASCADE含义：删除关联数据,与之关联也删除
@@ -71,25 +71,25 @@ class Reply(models.Model):
 # 点赞多对多
 class LikeMTM(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    like = models.ForeignKey(Like, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
 
 # 收藏多对多
 class CollectionMTM(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    collection = models.ForeignKey(Collection, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
 
 # 评论多对多
 class CommentMTM(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
 
 # 回复多对多
 class ReplyMTM(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    reply = models.ForeignKey(Reply, on_delete=models.CASCADE)
+    comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
 
 
 
