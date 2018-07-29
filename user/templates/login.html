@@ -11,10 +11,61 @@
 
 {% block page_content %}
     <div id="content">
-        <form action="{% url 'login_handler' %}" method="POST">
-            {% csrf_token %}
-            {{ form }}
-        </form>
+        <div id="left_img"><img src="{% static 'common/image/login-banner.png' %}"></div>
+        <div id="right_content">
+            <div id="login_title">
+                <span>账号登录</span>
+                <span class="pull-right">扫玛登录</span>
+            </div>
+            <div id="login_form">
+                <form action="{% url 'login_handler' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {#                        <label for="{{ form.username.id_for_label }}">用户名</label>#}
+                        {{ form.username }}
+                    </div>
+                    <div class="form-group">
+                        {#                        <label for="{{ form.password.id_for_label }}">密码</label>#}
+                        {{ form.password }}
+                    </div>
+                    <div class="checkbox">
+                        <label style="display: block;width: 100%;">
+                            {{ form.remeber_me }} <span>记住账号</span> <span class="pull-right"><a href="#">忘记密码</a></span>
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-danger btn-block">登录</button>
+                </form>
+            </div>
+            <div id="login_thrid">
+                <p>第三方登录</p>
+                <p><img src="{% static 'common/image/login-third-party-new.png' %}"></p>
+                <p><span>还没有ASDN账号?</span><span><a style="margin-left: 15%" href="{% url 'register' %}">立即注册</a></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="page_bottom">
+        <div>
+            <p style="height: 30px;margin-top:20px;border-bottom: 1px solid #c4c4c4">公司简介&nbsp;|&nbsp;招贤纳士&nbsp;|&nbsp;广告服务&nbsp;|&nbsp;联系方式&nbsp;|&nbsp;版权声明&nbsp;|&nbsp;法律顾问&nbsp;|&nbsp;问题报告&nbsp;|&nbsp;合作伙伴&nbsp;|&nbsp;论坛反馈</p>
+            <p>
+                <span style="overflow: hidden;height: 16px;display: inline-block;">
+                    <img src="{% static 'common/image/qq_icon.png' %}" style="width: 17px;height: 120px">
+                </span>网站客服&nbsp;
+                <span style="overflow: hidden;height: 16px;display: inline-block;">
+                    <img src="{% static 'common/image/qq_icon.png' %}" style="width: 17px;height: 120px">
+                </span>杂志客服&nbsp;
+                <span style="overflow: hidden;height: 16px;display: inline-block;">
+                    <img src="{% static 'common/image/weibo_icon.png' %}" style="width: 19px;height: 120px">
+                </span>微博客服&nbsp;
+                <span style="overflow: hidden;height: 16px;display: inline-block;">
+                    <img src="{% static 'common/image/mail_icon.png' %}" style="width: 16px;height: 126px">
+                </span>webmaster@csdn.net&nbsp;
+                <span style="overflow: hidden;height: 16px;display: inline-block;">
+                    <img src="{% static 'common/image/phone_icon.png' %}" style="width: 16px;height: 120px">
+                </span>400-660-0108&nbsp;|&nbsp;北京创新乐知信息技术有限公司 版权所有&nbsp;|&nbsp;江苏知之为计算机有限公司&nbsp;|&nbsp;江苏乐知网络技术有限公司
+            </p>
+            <p>京 ICP 证 09002463 号&nbsp;|&nbsp;Copyright © 1999-2018, CSDN.NET, All Rights Reserved</p>
+        </div>
     </div>
 {% endblock %}
 

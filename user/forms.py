@@ -6,9 +6,11 @@ from user.models import User
 
 
 class LoginForm(forms.Form):
-    username = forms.CharField(max_length=16, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    password = forms.CharField(min_length=6, max_length=32, widget=forms.PasswordInput(attrs={'class': 'form-control'}))
-    remeber_me = forms.BooleanField(widget=forms.CheckboxInput(attrs={'class': 'form-control'}))
+    username = forms.CharField(max_length=16,
+                               widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': '用户名'}))
+    password = forms.CharField(min_length=6, max_length=32,
+                               widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': '密码'}))
+    remeber_me = forms.BooleanField(widget=forms.CheckboxInput(), required=False)
 
     def clean(self):
         cleaned_data = self.cleaned_data
@@ -29,7 +31,7 @@ class LoginForm(forms.Form):
 
 
 class RegisterForm(forms.Form):
-    username = forms.CharField(max_length=16, label='Username',
+    username = forms.CharField(max_length=16,
                                widget=forms.TextInput(attrs={'class': 'form-control'}))
     password = forms.CharField(min_length=6, max_length=32, widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     confirm_password = forms.CharField(min_length=6, max_length=32,

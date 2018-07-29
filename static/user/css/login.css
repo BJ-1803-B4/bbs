@@ -1,0 +1,65 @@
+#container{
+    background: white;
+}
+#content{
+    position: absolute;
+    width: 50%;
+    height: 62%;
+    left: 25%;
+    top: 5%;
+}
+#left_img{
+    width: 56%;
+    height: 100%;
+    position: absolute;
+}
+#right_content{
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    border: 1px solid #bebebe;
+    border-radius: 5px;
+    background: rgba(241, 241, 241, 0.12);
+}
+#login_title{
+    width: 80%;
+    height: 10%;
+    position: absolute;
+    left: 10%;
+    top: 5%;
+}
+#login_title span{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.75);
+}
+#login_form{
+    height: 60%;
+}
+#login_form form{
+    width: 80%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+#login_thrid{
+    height: 40%;
+    border-top: 1px solid gray;
+}
+#login_thrid p{
+    margin: 5% 10%;
+    color:gray;
+}
+#page_bottom{
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid rgba(206, 206, 206, 0.31);
+    width: 100%;
+    height: 25%;
+}
+#page_bottom div{
+    position: absolute;
+    left: 15%;
+    color: #828282;
+    font-size: 15px;
+}
