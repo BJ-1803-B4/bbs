@@ -19,6 +19,12 @@
         <a id="login" href="{% url 'login' %}">登录</a>
         <div id="content">
             <div id="register_title">欢迎注册</div>
+            {% if form.non_field_errors %}
+                <div id="form_error">
+                    <div id="close_error">X</div>
+                    {{ form.non_field_errors }}
+                </div>
+            {% endif %}
             <div id="register_form">
                 <form action="{% url 'register_handler' %}" method="POST">
                     {% csrf_token %}
@@ -34,7 +40,7 @@
                         <label for="{{ form.confirm_password.id_for_label }}">确认密码</label>
                         {{ form.confirm_password }}
                     </div>
-                    <button type="button" class="btn btn-danger btn-block">确认注册</button>
+                    <button type="submit" class="btn btn-danger btn-block">确认注册</button>
                 </form>
             </div>
             <div id="note">

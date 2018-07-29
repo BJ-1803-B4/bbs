@@ -60,3 +60,23 @@
 #note span:last-child{
     color: gray;
 }
+
+#form_error{
+    border-radius: 5px;
+    background: #f2dede;;
+    font-size: 18px;
+    color: #8a6d3b;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 10px;
+    position: relative;
+}
+#form_error:hover{
+    background: #f6e1e1;
+}
+#close_error{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'common/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'common/css/bootstrap-theme.min.css' %}">
     <link rel="stylesheet" href="{% static 'common/css/common.css' %}">
     <title>
         {% block page_title %}
@@ -27,7 +28,7 @@
 
 <script type="text/javascript" src="{% static 'common/js/jquery.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'common/js/bootstrap.min.js' %}"></script>
-
+<script type="text/javascript" src="{% static 'user/js/close_error.js' %}"></script>
 {% block page_script %}
     {#    在子页面添加相关js#}
 {% endblock %}
