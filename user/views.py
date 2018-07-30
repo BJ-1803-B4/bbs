@@ -33,9 +33,10 @@ def login_handler(request):
         form = LoginForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data['username']
-            request.session['username'] = username
+            session_id = cookie_handler(username)
+            request.session[session_id] = username
             response = HttpResponseRedirect(reverse('index'))
-            response.set_cookie('uid', cookie_handler(username))
+            response.set_cookie('session_id', session_id)
             return response
         else:
             return render(request, 'login.html', {'form': form})

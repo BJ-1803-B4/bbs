@@ -13,10 +13,10 @@ from user.models import User
 def login_required(view_fun):
     def valid_cookie_and_session(request):
         try:
-            username_cookie = request.COOKIES.get('uid')
+            session_id = request.COOKIES.get('session_id')
             username_session = request.session.get('username')
             timestamp_signing = signing.TimestampSigner()
-            result = timestamp_signing.unsign(username_cookie, max_age=60*60*24)
+            result = timestamp_signing.unsign(session_id, max_age=60*60*24)
             username = signing.loads(result)['username']
             if username and username_session == username:
                 return view_fun(request)
@@ -27,13 +27,13 @@ def login_required(view_fun):
     return valid_cookie_and_session
 
 
-# 将经过加密的uid解密为username
+# 将经过加密的session_id解密为username
 def get_username(request):
-    uid = request.COOKIES.get('uid', 0)
-    if not uid:
-        return uid
+    session_id = request.COOKIES.get('session_id', 0)
+    if not session_id:
+        return session_id
     timestamp_signing = signing.TimestampSigner()
-    result = timestamp_signing.unsign(uid, max_age=60 * 60 * 24)
+    result = timestamp_signing.unsign(session_id, max_age=60 * 60 * 24)
     username = signing.loads(result)['username']
     return username
 
