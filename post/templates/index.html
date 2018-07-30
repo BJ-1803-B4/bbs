@@ -1,0 +1,28 @@
+{% extends 'nav_common.html' %}
+{% load static from staticfiles %}
+
+{% block page_title %}ASDN{% endblock %}
+
+{% block page_head %}
+
+{% endblock %}
+
+{% block page_content %}
+    <ul id="post_ul">
+        {% for post in posts %}
+            <li>
+                <p>
+                    <span>标题：<a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></span>
+                    <span>日期：{{ post.timestamp }}</span>
+                    <span>作者：{{ post.user.username }}</span>
+                </p>
+                <p>正文：{{ post.cont_html }}</p>
+            </li>
+            <br>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block page_script %}
+    <script type="text/javascript" src="{% static 'post/js/index.js' %}"></script>
+{% endblock %}

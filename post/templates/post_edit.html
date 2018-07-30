@@ -1,0 +1,23 @@
+{% extends 'nav_common.html' %}
+{% load static from staticfiles %}
+
+{% block page_title %}
+    帖子创建
+{% endblock %}
+
+{% block page_head %}
+    <link rel="stylesheet" href="{% static 'post/css/post_edit.css' %}">
+{% endblock %}
+
+{% block page_content %}
+    <div id="content">
+        <div id="edit_form">
+            <form action="{% url 'post_edit' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group">{{ form.post_title }}</div>
+                <div class="form-group">{{ form.post_content }}</div>
+                <button type="submit" class="btn btn-danger btn-block">提交</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

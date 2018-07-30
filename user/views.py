@@ -42,6 +42,13 @@ def login_handler(request):
     raise Http404
 
 
+def logout(request):
+    response = HttpResponseRedirect(reverse('index'))
+    for key in request.COOKIES:
+        response.delete_cookie(key)
+    return response
+
+
 def cookie_handler(username):
     timestamp_signing = signing.TimestampSigner()
     value1 = signing.dumps({"username": username})

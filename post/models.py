@@ -8,11 +8,13 @@ class PostManager(models.Manager):
     def all(self):
         return super().all().filter(is_delete=False)
 
-    def create(self, title, content_html, content_str):
+    def create(self, user, title, author, cont_html, cont_str):
         post = self.model()
+        post.user = user
+        post.author = author
         post.title = title
-        post.content_html = content_html
-        post.content_str = content_str
+        post.cont_html = cont_html
+        post.cont_str = cont_str
         post.save()
         return post
 
@@ -22,6 +24,7 @@ class PostManager(models.Manager):
 # 帖子
 class Post(models.Model):
     title = models.CharField(max_length=50)
+    author = models.CharField(max_length=16)
     cont_html = models.TextField()
     cont_str = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)

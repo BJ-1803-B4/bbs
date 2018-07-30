@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'nav_common.html' %}
+{% load static from staticfiles %}
 
-</body>
-</html>
+{% block page_title %}
+    帖子详情
+{% endblock %}
+
+{% block page_head %}
+    <link rel="stylesheet" href="{% static 'post/css/post_detail.css' %}">
+{% endblock %}
+
+{% block page_content %}
+    <div id="content">
+        <h1>标题：{{ post.title }}</h1>
+        <h1>日期：{{ post.timestamp }}</h1>
+        <h1>作者：{{ post.author }}</h1>
+        <h1>正文：{{ post.cont_html }}</h1>
+    </div>
+{% endblock %}
