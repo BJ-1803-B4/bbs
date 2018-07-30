@@ -1,0 +1,67 @@
+#left_nav{
+    position: absolute;
+    width: 10%;
+    height: 60%;
+    background: skyblue;
+    left: 13%;
+    top: 10%;
+}
+
+#top_ad{
+    position: absolute;
+    width: 40%;
+    height: 30%;
+    background: yellowgreen;
+    left: 25%;
+    top: 10%;
+}
+
+#post_ul{
+    position: absolute;
+    width: 40%;
+    background: #b2dba1;
+    left: 25%;
+    top: 43%;
+}
+
+#top_ten{
+    position: absolute;
+    width: 20%;
+    height: 60%;
+    background: rebeccapurple;
+    right: 13%;
+    top: 10%;
+}
+
+#post_ul li{
+    height: 80px;
+    border-bottom: 1px solid indianred;
+}
+
+#post_ul li p:first-child{
+    font-size: 30px;
+    text-indent: 30px;
+    margin-top: 20px;
+}
+
+#post_ul li p:first-child a{
+    color: #3c3c3c;
+}
+
+#post_ul li p:last-child span{
+    display: inline-block;
+    text-indent: 30px;
+}
+
+#post_ul li p:last-child span:nth-child(3){
+    float: right;
+    margin-right: 30px;
+}
+
+#post_ul li p:last-child span:nth-child(4){
+    float: right;
+}
+
+#post_ul li p:last-child span span{
+    color: dodgerblue;
+}

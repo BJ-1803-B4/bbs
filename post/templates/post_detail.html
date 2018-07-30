@@ -10,10 +10,20 @@
 {% endblock %}
 
 {% block page_content %}
-    <div id="content">
-        <h1>标题：{{ post.title }}</h1>
-        <h1>日期：{{ post.timestamp }}</h1>
-        <h1>作者：{{ post.author }}</h1>
-        <h1>正文：{{ post.cont_html }}</h1>
+    <div id="top_ad"><img src="{% static 'common/image/bg-title.png' %}"></div>
+    <div id="left_button"></div>
+    <div id="mid_content">
+        <div id="head">
+            <p>{{ post.title }}</p>
+            <p>
+                <span>{{ post.timestamp }}</span>
+                <span class="pull-right">阅读数：{{ post.view_count }}</span>
+            </p>
+        </div>
+        <div id="content">
+            {{ post.cont_html }}
+        </div>
     </div>
+    <div id="right_content"></div>
+
 {% endblock %}

@@ -4,21 +4,33 @@
 {% block page_title %}ASDN{% endblock %}
 
 {% block page_head %}
-
+    <link rel="stylesheet" href="{% static 'post/css/index.css' %}">
 {% endblock %}
 
 {% block page_content %}
+    <div id="left_nav"></div>
+    <div id="top_ad"></div>
+    <div id="top_ten"></div>
     <ul id="post_ul">
         {% for post in posts %}
             <li>
+                <p><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></p>
                 <p>
-                    <span>标题：<a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></span>
-                    <span>日期：{{ post.timestamp }}</span>
-                    <span>作者：{{ post.user.username }}</span>
+                    <span>{{ post.user.username }}</span>
+                    <span>{{ post.timestamp }}</span>
+                    <span><span>{{ post.comm_count }}</span>&nbsp;评论</span>
+                    <span><span>{{ post.view_count }}</span>&nbsp;阅读</span>
                 </p>
-                <p>正文：{{ post.cont_html }}</p>
             </li>
-            <br>
+            <li>
+                <p><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></p>
+                <p>
+                    <span>{{ post.user.username }}</span>
+                    <span>{{ post.timestamp }}</span>
+                    <span><span>{{ post.comm_count }}</span>&nbsp;评论</span>
+                    <span><span>{{ post.view_count }}</span>&nbsp;阅读</span>
+                </p>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}

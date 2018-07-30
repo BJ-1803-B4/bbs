@@ -1,0 +1,52 @@
+#top_ad{
+    height: 130px;
+}
+
+#left_button{
+    position: fixed;
+    width: 4%;
+    height: 40%;
+    top: 30%;
+    left: 11%;
+    background: white;
+}
+
+#mid_content{
+    position: absolute;
+    width: 50%;
+    top: 183px;
+    left: 17%;
+    background: white;
+}
+
+#right_content{
+    position: absolute;
+    width: 20%;
+    height: 60%;
+    top: 183px;
+    right: 11%;
+    background: white;
+}
+
+#head{
+    height: 30%;
+    border-bottom: 1px solid gray;
+}
+#head p:first-child{
+    font-size: 36px;
+    text-indent: 30px;
+    margin-top: 30px;
+}
+
+#head p:last-child span{
+    display: inline-block;
+    text-indent: 30px;
+    margin-right: 30px;
+    color: gray;
+}
+
+#content{
+    margin: 30px;
+    font-size: 22px;
+    color: #5f5f5f;
+}
