@@ -16,7 +16,7 @@ def register_handler(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         if form.is_valid():
-            User.objects.create_user(form.cleaned_data.get('username'), form.cleaned_data.get('password'))
+            User.objects.create(form.cleaned_data.get('username'), form.cleaned_data.get('password'))
             return redirect('login')
         else:
             return render(request, 'register.html', {'form': form})

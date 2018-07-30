@@ -8,7 +8,7 @@ class PostManager(models.Manager):
     def all(self):
         return super().all().filter(is_delete=False)
 
-    def create_post(self, title, content_html, content_str):
+    def create(self, title, content_html, content_str):
         post = self.model()
         post.title = title
         post.content_html = content_html
@@ -24,6 +24,7 @@ class Post(models.Model):
     title = models.CharField(max_length=50)
     cont_html = models.TextField()
     cont_str = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
     view_count = models.IntegerField(default=0)
     like_count = models.IntegerField(default=0)
     coll_count = models.IntegerField(default=0)
