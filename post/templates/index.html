@@ -8,20 +8,15 @@
 {% endblock %}
 
 {% block page_content %}
-    <div id="left_nav"></div>
+    <div id="left_nav">
+        <ul>
+            <li id="to_top">返回顶部</li>
+        </ul>
+    </div>
     <div id="top_ad"></div>
     <div id="top_ten"></div>
     <ul id="post_ul">
         {% for post in posts %}
-            <li>
-                <p><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></p>
-                <p>
-                    <span>{{ post.user.username }}</span>
-                    <span>{{ post.timestamp }}</span>
-                    <span><span>{{ post.comm_count }}</span>&nbsp;评论</span>
-                    <span><span>{{ post.view_count }}</span>&nbsp;阅读</span>
-                </p>
-            </li>
             <li>
                 <p><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></p>
                 <p>

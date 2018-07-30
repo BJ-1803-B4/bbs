@@ -30,14 +30,17 @@ $(function () {
                             author = post_list[i]['fields']['author'],
                             cont_str = post_list[i]['fields']['cont_str'],
                             timestamp = post_list[i]['fields']['timestamp'],
+                            view_count = post_list[i]['fields']['view_count'],
+                            comm_count = post_list[i]['fields']['comm_count'],
                             $post = "<li>" +
-                                    "<p>" +
-                                    "<span>标题：" + "<a href='"+ post_url +"'>" + title + "</a></span>" +
-                                    "<span>日期：" + timestamp + "</span>" +
-                                    "<span>作者：" + author + "</span>" +
-                                    "</p>" +
-                                    "<p>正文：" + cont_str + "</p>" +
-                                    "</li>";
+                                "       <p><a href=" + post_url + ">" + title + "</a></p>" +
+                                "       <p>" +
+                                "           <span>" + author + "</span>" +
+                                "           <span>" + timestamp + "</span>" +
+                                "           <span><span>" + comm_count +"</span>&nbsp;评论</span>" +
+                                "           <span><span>" + comm_count + "</span>&nbsp;阅读</span>" +
+                                "       </p>" +
+                                "   </li>";
                         $('#post_ul').append($post);
                     }
                     start += offset;
@@ -46,7 +49,7 @@ $(function () {
                     }, 1000);
                 } else {
                     console.log('没有帖子了');
-                    $('#post_ul').append('<li id="bottom_div">只有这么多了...</li>');
+                    $('#post_ul').append('<div id="bottom_div">只有这么多了...</div>');
                 }
             })
         }
