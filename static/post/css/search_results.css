@@ -1,0 +1,105 @@
+#content{
+    width: 40%;
+    position: relative;
+    left: 20%;
+}
+
+#content_head{
+    width: 100%;
+    height: 120px;
+    position: relative;
+}
+#content_body{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    margin: 3% 0 3%;
+    background: white;
+}
+#content_footer{
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+#sort{
+    font-size: 20px;
+    position: absolute;
+    top: 30px;
+}
+
+#content_head .input_form{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+}
+#content input{
+    width: 85%;
+}
+#content button{
+    width: 14%;
+}
+
+#content_body ul{
+    width: 94%;
+    position: absolute;
+    left: 3%;
+    top: 3%;
+}
+#content_body li{
+    width: 100%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    height: 100px;
+}
+#content_body p{
+    margin-bottom: 5px;
+}
+.post_title{
+    font-size: 20px;
+}
+
+.ad1{
+    position: absolute;
+    top: 200px;
+    right: 400px;
+    width: 300px;
+    height: 300px;
+    background: skyblue;
+}
+.ad2{
+    position: absolute;
+    top: 530px;
+    right: 400px;
+    width: 300px;
+    height: 300px;
+    background: skyblue;
+}
+
+.pagination{
+    margin: 0 !important;
+    height: 100% !important;
+    position: absolute;
+    width: 35%;
+    right: 20px;
+    top: 20px;
+}
+#content_footer .input_form{
+    position: absolute;
+    width: 100%;
+    top: 120px;
+}
+
+#page_bottom{
+    width: 100%;
+    height: 120px;
+    background: white;
+    position: relative;
+}
+#page_bottom dl{
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    top: 20px;
+}
+

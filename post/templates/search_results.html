@@ -1,0 +1,123 @@
+{% extends 'nav_common.html' %}
+{% load static from staticfiles %}
+
+{% block page_title %}
+    搜索结果
+{% endblock %}
+
+{% block page_head %}
+    <link rel="stylesheet" href="{% static 'post/css/search_results.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+    <div id="content">
+
+        <div id="content_head">
+
+            <div id="sort">
+                <span><a href="#">按时间排序</a></span>
+                <span><a href="#">按浏览量排序</a></span>
+                <span><a href="#">按评论数排序</a></span>
+                <span><a href="#">按点赞数排序</a></span>
+                <span><a href="#">按收藏数排序</a></span>
+            </div>
+
+            <div class="input_form">
+                <form class="form-inline">
+                    <input type="text" class="form-control" value="" placeholder="">
+                    <button type="submit" class="btn btn-danger">搜索</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div id="content_body">
+
+            <ul>
+                <li>
+                    <p class="post_title"><a href="#">这里是帖子标题</a></p>
+                    <p class="post_info">
+                        <span>作者：姚青</span>
+                        <span>日期：2018-07-28 17：35：00</span>
+                        <span>浏览：8888</span>
+                    </p>
+                    <p class="post_content">这里是帖子内容</p>
+                </li>
+                <li>
+                    <p class="post_title"><a href="#">这里是帖子标题</a></p>
+                    <p class="post_info">
+                        <span>作者：姚青</span>
+                        <span>日期：2018-07-28 17：35：00</span>
+                        <span>浏览：8888</span>
+                    </p>
+                    <p class="post_content">这里是帖子内容</p>
+                </li>
+            </ul>
+
+        </div>
+
+        <div id="content_footer">
+
+            <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+
+            <div class="input_form">
+                <form class="form-inline">
+                    <input type="text" class="form-control" value="" placeholder="">
+                    <button type="submit" class="btn btn-danger">搜索</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="ad1"><img src="{% static 'common/image/ad1.jpg' %}" ></div>
+    <div class="ad2"><img src="{% static 'common/image/ad1.jpg' %}" ></div>
+
+    <div id="page_bottom">
+        <dl>
+            <dd>
+                <a href="#">公司简介</a><span>|</span>
+                <a href="#">招贤纳士</a><span>|</span>
+                <a href="#">广告服务</a><span>|</span>
+                <a href="#">联系方式</a><span>|</span>
+                <a href="#">版权声明</a><span>|</span>
+                <a href="#">法律顾问</a><span>|</span>
+                <a href="#">问题报告</a><span>|</span>
+                <a href="#">合作伙伴</a><span>|</span>
+                <a href="#">论坛反馈</a></dd>
+            <dd>
+                <a href="#">网站客服</a>
+                <a href="#">杂志客服</a>
+                <a href="#">微博客服</a>
+                <a href="#">webmaster@csdn.net</a>
+                <span>400-660-0108</span><span>|</span>
+                <span>北京创新乐知信息技术有限公司 版权所有</span>
+                <span>|</span><span>江苏知之为计算机有限公司</span>
+                <span>|</span><span>江苏乐知网络技术有限公司</span>
+            </dd>
+            <dd>
+                <span>京&nbsp;ICP&nbsp;证&nbsp;09002463&nbsp;号</span>
+                <span>|</span><span>Copyright © 1999-2018, CSDN.NET, All Rights Reserved&nbsp;</span>
+            </dd>
+        </dl>
+    </div>
+
+{% endblock %}

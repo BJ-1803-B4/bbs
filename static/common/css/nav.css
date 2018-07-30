@@ -1,5 +1,24 @@
+<<<<<<< HEAD
 .clearFloat::after{
     content:"";
     display: block;
     clear: both;
+=======
+nav{
+    margin: 0 !important;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: white !important;
+    color: #000 !important;
+}
+
+nav a:hover{
+    background: #d9534f !important;
+    color: white !important;
+}
+
+.navbar-header a{
+    font-size: 26px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+>>>>>>> 1279cbd0b1bf99e94d339678801f5563bd3c88b5
 }
