@@ -30,7 +30,11 @@ class Post(models.Model):
     comm_count = models.IntegerField(default=0)
     is_delete = models.BooleanField(default=False)
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)  # on_delete=models.CASCADE含义：删除关联数据,与之关联也删除
+    user = models.ForeignKey(User)
+
+    likes = models.ManyToManyField(User, through='Like', related_name='likes')
+    colls = models.ManyToManyField(User, through='Collection', related_name='colls')
+    comms = models.ManyToManyField(User, through='Comment', related_name='comms')
 
     objects = PostManager()
 
@@ -42,14 +46,16 @@ class Post(models.Model):
 class Like(models.Model):
     is_list = models.BooleanField(default=True)
     timestamp = models.DateTimeField(auto_now_add=True)
-    like_mtm = models.ManyToManyField(User, through='LikeMTM')
+    uid = models.ForeignKey(User, related_name='like')
+    pid = models.ForeignKey(Post, related_name='like')
 
 
 # 收藏
 class Collection(models.Model):
     is_coll = models.BooleanField(default=True)
     timestamp = models.DateTimeField(auto_now_add=True)
-    coll_mtm = models.ManyToManyField(User, through='CollectionMTM')
+    uid = models.ForeignKey(User, related_name='coll')
+    pid = models.ForeignKey(Post, related_name='coll')
 
 
 # 评论
@@ -57,7 +63,9 @@ class Comment(models.Model):
     cont_str = models.CharField(max_length=256)
     is_delete = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now_add=True)
-    comm_mtm = models.ManyToManyField(User, through='CommentMTM')
+    uid = models.ForeignKey(User, related_name='comm')
+    pid = models.ForeignKey(Post, related_name='comm')
+    replys = models.ManyToManyField(User, through='Reply', related_name='replys')
 
 
 # 回复
@@ -65,33 +73,6 @@ class Reply(models.Model):
     cont_str = models.CharField(max_length=256)
     is_delete = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now_add=True)
-    reply_mtm = models.ManyToManyField(User, through='ReplyMTM')
-
-
-# 点赞多对多
-class LikeMTM(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
-
-
-# 收藏多对多
-class CollectionMTM(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
-
-
-# 评论多对多
-class CommentMTM(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
-
-
-# 回复多对多
-class ReplyMTM(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
-
-
-
-
+    uid = models.ForeignKey(User, related_name='reply')
+    cid = models.ForeignKey(Comment, related_name='reply')
 

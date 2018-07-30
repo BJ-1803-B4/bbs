@@ -118,3 +118,5 @@ medias/*
 
 .idea/workspace.xml
 
+migrations
+
