@@ -1,0 +1,637 @@
+{% extends 'nav_common.html' %}
+{% load static %}
+{#{% load static from staticfiles %}#}
+{% block page_title %}
+    {{ title }}
+{% endblock %}
+{% block page_head %}
+    {{ blokc.super }}
+    <link rel="stylesheet" href="{% static 'common/css/csdn_feed.css' %}">
+{% endblock %}
+
+{% block page_content %}
+    <div style="margin: auto">
+        <div class="container1 clearfix">
+            <div id="nav1" class="clearfix">
+                <div class="clearfix">
+                    <div class="nav_com">
+                        <ul>
+                            <li class="active"><a href="/">推荐</a></li>
+                            <li class=""><a href="#">最新文章</a></li>
+                            <li class=""><a href="#">关注</a></li>
+                            <li class=""><a href="#">资讯</a></li>
+                            <li class=""><a href="#">人工智能</a></li>
+                            <li class=""><a href="#">云计算/大数据</a></li>
+                            <li class=""><a href="#">区块链</a></li>
+                            <li class=""><a href="#">数据库</a></li>
+                            <li class=""><a href="#">程序人生</a></li>
+                            <li class=""><a href="#">游戏开发</a></li>
+                            <li class=""><a href="#">研发管理</a></li>
+                            <li class=""><a href="#">前端</a></li>
+                            <li class=""><a href="#">移动开发</a></li>
+                            <li class=""><a href="#">物联网</a></li>
+                            <li class=""><a href="#">运维</a></li>
+                            <li class=""><a href="#">计算机基础</a></li>
+                            <li class=""><a href="/#ng">编程语言</a></li>
+                            <li class=""><a href="#">架构</a></li>
+                            <li class=""><a href="#">音视频开发</a></li>
+                            <li class=""><a href="#">安全</a></li>
+                            <li class=""><a href="#">其他</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="fixed_content">
+
+                <div class="banner-ad-box">
+                    <div class="J_adv" data-view="true" data-mod="ad_popu_281" data-mtp="2" data-order="870"
+                         data-con="ad_content_4035" style="width: 800px; height: 150px;">
+                        <div style="line-height:0px;">
+                            <a target="_blank" href="#">
+                                <img width="800" height="150" src="{% static 'common/img/201807061754102068.jpg' %}">
+                            </a>
+                            <div style="left: 0px; width: 26px; background: transparent url('{% static 'common/img/201807061754102068.jpg' %}') no-repeat scroll right top; height: 16px;z-index: 12; position: relative; bottom: 16px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="J_adv" data-view="true" data-mod="ad_popu_282" data-mtp="2" data-order="719"
+                         data-con="ad_content_3743" style="width: 400px; height: 150px;">
+                        <div style="line-height:0px;">
+                            <a target="_blank" href="#">
+                                <img width="400" height="150" src="{% static 'common/img/201807231104486342.jpg' %}">
+                            </a>
+                            <div style="left: 0px; width: 26px; background: transparent url('{% static 'common/img/201608021757063065.png' %}') no-repeat scroll right top; height: 16px;z-index: 12; position: relative; bottom: 16px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--头部banner广告 end-->
+                <main>
+                    <div class="carousel">
+                        <div class="carousel-left">
+                            <div id="myCarousel" class="slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+                                    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                                    <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+                                    <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+                                    <li data-target="#myCarousel" data-slide-to="4" class="active"></li>
+                                </ol>
+                                <div class="carousel-inner" role="listbox">
+
+                                    <div class="carousel-item csdn-tracking-statistics" data-mod="popu_465"
+                                         data-dsm="post">
+                                        <a href="https://blog.csdn.net/csdnnews/article/details/81230546"
+                                           target="_blank">
+                                            <img src="{% static 'common/img/6b694b99c1ad6402d849f2534a7d8c69.jpg' %}">
+                                        </a>
+                                        <a href="https://blog.csdn.net/csdnnews/article/details/81230546"
+                                           target="_blank">
+                                            <div class="carousel-caption">老是原罪？技术圈为何不待见大龄企业家
+                                            </div>
+                                        </a>
+                                        <a href="https://blog.csdn.net/csdnnews/article/details/81230546"
+                                           target="_blank" style="display:block;">
+                                            <div class="cover"></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="carousel-item csdn-tracking-statistics" data-mod="popu_465"
+                                         data-dsm="post">
+                                        <a href="https://blog.csdn.net/dqcfkyqdxym3f8rb0/article/details/81230528"
+                                           target="_blank">
+                                            <img src="{% static 'common/img/6b694b99c1ad6402d849f2534a7d8c69.jpg' %}">
+                                        </a>
+                                        <a href="https://blog.csdn.net/dqcfkyqdxym3f8rb0/article/details/81230528"
+                                           target="_blank">
+                                            <div class="carousel-caption">
+                                                微软为华为定制了一个“烂笔头小冰”，让人想起了老罗的“闪念胶囊”
+                                            </div>
+                                        </a>
+                                        <a href="https://blog.csdn.net/dqcfkyqdxym3f8rb0/article/details/81230528"
+                                           target="_blank" style="display:block;">
+                                            <div class="cover"></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="carousel-item csdn-tracking-statistics" data-mod="popu_465"
+                                         data-dsm="post">
+                                        <a href="https://blog.csdn.net/csdnnews/article/details/81213227"
+                                           target="_blank">
+                                            <img src="{% static 'common/img/6b694b99c1ad6402d849f2534a7d8c69.jpg' %}">
+                                        </a>
+                                        <a href="https://blog.csdn.net/csdnnews/article/details/81213227"
+                                           target="_blank">
+                                            <div class="carousel-caption">
+                                                微软：程序员们，是时候丢掉 Win 7 了！
+                                            </div>
+                                        </a>
+                                        <a href="https://blog.csdn.net/csdnnews/article/details/81213227"
+                                           target="_blank" style="display:block;">
+                                            <div class="cover"></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="carousel-item csdn-tracking-statistics" data-mod="popu_465"
+                                         data-dsm="post">
+                                        <a href="https://blog.csdn.net/dqcfkyqdxym3f8rb0/article/details/81212490"
+                                           target="_blank">
+                                            <img src="{% static 'common/img/6b694b99c1ad6402d849f2534a7d8c69.jpg' %}">
+                                        </a>
+                                        <a href="https://blog.csdn.net/dqcfkyqdxym3f8rb0/article/details/81212490"
+                                           target="_blank">
+                                            <div class="carousel-caption">
+                                                上线三年却很“鸡肋”的微信声音锁究竟做错了什么？
+                                            </div>
+                                        </a>
+                                        <a href="https://blog.csdn.net/dqcfkyqdxym3f8rb0/article/details/81212490"
+                                           target="_blank" style="display:block;">
+                                            <div class="cover"></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="carousel-item csdn-tracking-statistics active" data-mod="popu_465"
+                                         data-dsm="post">
+                                        <a href="https://blog.csdn.net/csdnsevenn/article/details/81212458"
+                                           target="_blank">
+                                            <img src="{% static 'common/img/6b694b99c1ad6402d849f2534a7d8c69.jpg' %}">
+                                        </a>
+                                        <a href="https://blog.csdn.net/csdnsevenn/article/details/81212458"
+                                           target="_blank">
+                                            <div class="carousel-caption">
+                                                等重构完这系统，我就辞职
+                                            </div>
+                                        </a>
+                                        <a href="https://blog.csdn.net/csdnsevenn/article/details/81212458"
+                                           target="_blank" style="display:block;">
+                                            <div class="cover"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                <span class="glyphicon" aria-hidden="true">
+                                    <svg viewBox="0 0 19 30">
+                                        <path d="M18,5L7,16l11,11l-3,3L1,16L15,2L18,5z"></path>
+                                    </svg>
+                                </span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                <span class="glyphicon" aria-hidden="true">
+                                    <svg viewBox="0 0 19 30">
+                                        <path d="M4,1l14,14L4,29l-3-3l11-11L1,4L4,1z"></path>
+                                    </svg>
+                                </span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div><!-- /.carousel -->
+                        </div>
+                        <div class="carousel-right">
+                            <div class="carousel-right-u csdn-tracking-statistics" data-mod="popu_616" data-dsm="post">
+                                <a href="https://edu.csdn.net/huiyiCourse/detail/833" target="_blank">
+                                    <img src="{% static 'common/img/fdcf035414fe023a13ac4fcc7f2014dd.jpg' %}">
+                                </a>
+                                <a href="https://edu.csdn.net/huiyiCourse/detail/833" target="_blank">
+                                    <p class="carousel-right-caption">
+                                        <span>入门知识图谱，你首先需要了解这些内容</span>
+                                    </p>
+                                </a>
+                                <a href="https://edu.csdn.net/huiyiCourse/detail/833" target="_blank"
+                                   style="display:block;">
+                                    <div class="cover"></div>
+                                </a>
+                            </div>
+                            <div class="carousel-right-u csdn-tracking-statistics" data-mod="popu_616" data-dsm="post">
+                                <a href="https://blog.csdn.net/csdnnews/article/details/81230540" target="_blank">
+                                    <img src="{% static 'common/img/fdcf035414fe023a13ac4fcc7f2014dd.jpg' %}">
+                                </a>
+                                <a href="https://blog.csdn.net/csdnnews/article/details/81230540" target="_blank">
+                                    <p class="carousel-right-caption">
+                                        <span>Java 工程师薪资不如 C、博士热度不如硕士，哪类程序员最受企业欢迎？</span>
+                                    </p>
+                                </a>
+                                <a href="https://blog.csdn.net/csdnnews/article/details/81230540" target="_blank"
+                                   style="display:block;">
+                                    <div class="cover"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="feedlist_mod home" id="feedlist_id" shown-offset="1532694240919897"
+                        style="padding-top: 0px;">
+                        <li class="clearfix" data-type="top" data-id="81114152" shown-time="1532694240">
+                            <div class="list_con">
+                                <div class="title">
+                                    <h2>
+                                        <a href="#" target="_blank">为什么说 NLP 将是未来数据领域的珠峰？ </a>
+                                    </h2>
+                                </div>
+                                <div class="summary oneline">
+                                    在目前的商业场中，NLP 技术用于分析源自邮件、音频、文件、网页、论坛、社交媒体中的大量半结构化和非结构化数据，市场前景巨大。
+                                </div>
+                                <dl class="list_userbar">
+
+                                    <dt>
+                                        {# 用户头像#}
+                                        <a href="#" target="_blank" class="user_img">
+                                            <img src="https://avatar.csdn.net/2/8/D/1_gitchat.jpg" alt="GitChat"
+                                                 title="GitChat">
+                                        </a>
+                                    </dt>
+                                    <dd class="name">
+                                        <a href="#" target="_blank">GitChat技术杂谈 </a>
+                                    </dd>
+                                    <dd class="time">8天前</dd>
+
+                                    <div class="interactive floatR">
+                                        <!--阅读 begin-->
+                                        <dd class="read_num">
+                                            <a href="">
+                                                <span class="num">1452</span>
+                                                <span class="text">阅读</span>
+                                            </a>
+                                        </dd>
+                                        <!--阅读 end-->
+                                    </div>
+                                </dl>
+                                <div class="is_top"></div>
+                            </div>
+                        </li>
+                        <li class="clearfix" data-type="top" data-id="81114152" shown-time="1532694240">
+                            <div class="list_con">
+                                <div class="title">
+                                    <h2>
+                                        <a href="#" target="_blank">为什么说 NLP 将是未来数据领域的珠峰？ </a>
+                                    </h2>
+                                </div>
+                                <div class="summary oneline">
+                                    在目前的商业场中，NLP 技术用于分析源自邮件、音频、文件、网页、论坛、社交媒体中的大量半结构化和非结构化数据，市场前景巨大。
+                                </div>
+                                <dl class="list_userbar">
+
+                                    <dt>
+                                        {# 用户头像#}
+                                        <a href="#" target="_blank" class="user_img">
+                                            <img src="https://avatar.csdn.net/2/8/D/1_gitchat.jpg" alt="GitChat"
+                                                 title="GitChat">
+                                        </a>
+                                    </dt>
+                                    <dd class="name">
+                                        <a href="#" target="_blank">GitChat技术杂谈 </a>
+                                    </dd>
+                                    <dd class="time">8天前</dd>
+
+                                    <div class="interactive floatR">
+                                        <!--阅读 begin-->
+                                        <dd class="read_num">
+                                            <a href="">
+                                                <span class="num">1452</span>
+                                                <span class="text">阅读</span>
+                                            </a>
+                                        </dd>
+                                        <!--阅读 end-->
+                                    </div>
+                                </dl>
+                                <div class="is_top"></div>
+                            </div>
+                        </li>
+                        <li class="clearfix" data-type="top" data-id="81114152" shown-time="1532694240">
+                            <div class="list_con">
+                                <div class="title">
+                                    <h2>
+                                        <a href="#" target="_blank">为什么说 NLP 将是未来数据领域的珠峰？ </a>
+                                    </h2>
+                                </div>
+                                <div class="summary oneline">
+                                    在目前的商业场中，NLP 技术用于分析源自邮件、音频、文件、网页、论坛、社交媒体中的大量半结构化和非结构化数据，市场前景巨大。
+                                </div>
+                                <dl class="list_userbar">
+
+                                    <dt>
+                                        {# 用户头像#}
+                                        <a href="#" target="_blank" class="user_img">
+                                            <img src="https://avatar.csdn.net/2/8/D/1_gitchat.jpg" alt="GitChat"
+                                                 title="GitChat">
+                                        </a>
+                                    </dt>
+                                    <dd class="name">
+                                        <a href="#" target="_blank">GitChat技术杂谈 </a>
+                                    </dd>
+                                    <dd class="time">8天前</dd>
+
+                                    <div class="interactive floatR">
+                                        <!--阅读 begin-->
+                                        <dd class="read_num">
+                                            <a href="">
+                                                <span class="num">1452</span>
+                                                <span class="text">阅读</span>
+                                            </a>
+                                        </dd>
+                                        <!--阅读 end-->
+                                    </div>
+                                </dl>
+                                <div class="is_top"></div>
+                            </div>
+                        </li>
+                        <li class="clearfix" data-type="top" data-id="81114152" shown-time="1532694240">
+                            <div class="list_con">
+                                <div class="title">
+                                    <h2>
+                                        <a href="#" target="_blank">为什么说 NLP 将是未来数据领域的珠峰？ </a>
+                                    </h2>
+                                </div>
+                                <div class="summary oneline">
+                                    在目前的商业场中，NLP 技术用于分析源自邮件、音频、文件、网页、论坛、社交媒体中的大量半结构化和非结构化数据，市场前景巨大。
+                                </div>
+                                <dl class="list_userbar">
+
+                                    <dt>
+                                        {# 用户头像#}
+                                        <a href="#" target="_blank" class="user_img">
+                                            <img src="https://avatar.csdn.net/2/8/D/1_gitchat.jpg" alt="GitChat"
+                                                 title="GitChat">
+                                        </a>
+                                    </dt>
+                                    <dd class="name">
+                                        <a href="#" target="_blank">GitChat技术杂谈 </a>
+                                    </dd>
+                                    <dd class="time">8天前</dd>
+
+                                    <div class="interactive floatR">
+                                        <!--阅读 begin-->
+                                        <dd class="read_num">
+                                            <a href="">
+                                                <span class="num">1452</span>
+                                                <span class="text">阅读</span>
+                                            </a>
+                                        </dd>
+                                        <!--阅读 end-->
+                                    </div>
+                                </dl>
+                                <div class="is_top"></div>
+                            </div>
+                        </li>
+                        <li class="clearfix" data-type="top" data-id="81114152" shown-time="1532694240">
+                            <div class="list_con">
+                                <div class="title">
+                                    <h2>
+                                        <a href="#" target="_blank">为什么说 NLP 将是未来数据领域的珠峰？ </a>
+                                    </h2>
+                                </div>
+                                <div class="summary oneline">
+                                    在目前的商业场中，NLP 技术用于分析源自邮件、音频、文件、网页、论坛、社交媒体中的大量半结构化和非结构化数据，市场前景巨大。
+                                </div>
+                                <dl class="list_userbar">
+
+                                    <dt>
+                                        {# 用户头像#}
+                                        <a href="#" target="_blank" class="user_img">
+                                            <img src="https://avatar.csdn.net/2/8/D/1_gitchat.jpg" alt="GitChat"
+                                                 title="GitChat">
+                                        </a>
+                                    </dt>
+                                    <dd class="name">
+                                        <a href="#" target="_blank">GitChat技术杂谈 </a>
+                                    </dd>
+                                    <dd class="time">8天前</dd>
+
+                                    <div class="interactive floatR">
+                                        <!--阅读 begin-->
+                                        <dd class="read_num">
+                                            <a href="">
+                                                <span class="num">1452</span>
+                                                <span class="text">阅读</span>
+                                            </a>
+                                        </dd>
+                                        <!--阅读 end-->
+                                    </div>
+                                </dl>
+                                <div class="is_top"></div>
+                            </div>
+                        </li>
+                        <li class="clearfix" data-type="top" data-id="81114152" shown-time="1532694240">
+                            <div class="list_con">
+                                <div class="title">
+                                    <h2>
+                                        <a href="#" target="_blank">为什么说 NLP 将是未来数据领域的珠峰？ </a>
+                                    </h2>
+                                </div>
+                                <div class="summary oneline">
+                                    在目前的商业场中，NLP 技术用于分析源自邮件、音频、文件、网页、论坛、社交媒体中的大量半结构化和非结构化数据，市场前景巨大。
+                                </div>
+                                <dl class="list_userbar">
+
+                                    <dt>
+                                        {# 用户头像#}
+                                        <a href="#" target="_blank" class="user_img">
+                                            <img src="https://avatar.csdn.net/2/8/D/1_gitchat.jpg" alt="GitChat"
+                                                 title="GitChat">
+                                        </a>
+                                    </dt>
+                                    <dd class="name">
+                                        <a href="#" target="_blank">GitChat技术杂谈 </a>
+                                    </dd>
+                                    <dd class="time">8天前</dd>
+
+                                    <div class="interactive floatR">
+                                        <!--阅读 begin-->
+                                        <dd class="read_num">
+                                            <a href="">
+                                                <span class="num">1452</span>
+                                                <span class="text">阅读</span>
+                                            </a>
+                                        </dd>
+                                        <!--阅读 end-->
+                                    </div>
+                                </dl>
+                                <div class="is_top"></div>
+                            </div>
+                        </li>
+                        <li class="clearfix" data-type="top" data-id="81114152" shown-time="1532694240">
+                            <div class="list_con">
+                                <div class="title">
+                                    <h2>
+                                        <a href="#" target="_blank">为什么说 NLP 将是未来数据领域的珠峰？ </a>
+                                    </h2>
+                                </div>
+                                <div class="summary oneline">
+                                    在目前的商业场中，NLP 技术用于分析源自邮件、音频、文件、网页、论坛、社交媒体中的大量半结构化和非结构化数据，市场前景巨大。
+                                </div>
+                                <dl class="list_userbar">
+
+                                    <dt>
+                                        {# 用户头像#}
+                                        <a href="#" target="_blank" class="user_img">
+                                            <img src="https://avatar.csdn.net/2/8/D/1_gitchat.jpg" alt="GitChat"
+                                                 title="GitChat">
+                                        </a>
+                                    </dt>
+                                    <dd class="name">
+                                        <a href="#" target="_blank">GitChat技术杂谈 </a>
+                                    </dd>
+                                    <dd class="time">8天前</dd>
+
+                                    <div class="interactive floatR">
+                                        <!--阅读 begin-->
+                                        <dd class="read_num">
+                                            <a href="">
+                                                <span class="num">1452</span>
+                                                <span class="text">阅读</span>
+                                            </a>
+                                        </dd>
+                                        <!--阅读 end-->
+                                    </div>
+                                </dl>
+                                <div class="is_top"></div>
+                            </div>
+                        </li>
+                        <li class="clearfix" data-type="top" data-id="81114152" shown-time="1532694240">
+                            <div class="list_con">
+                                <div class="title">
+                                    <h2>
+                                        <a href="#" target="_blank">为什么说 NLP 将是未来数据领域的珠峰？ </a>
+                                    </h2>
+                                </div>
+                                <div class="summary oneline">
+                                    在目前的商业场中，NLP 技术用于分析源自邮件、音频、文件、网页、论坛、社交媒体中的大量半结构化和非结构化数据，市场前景巨大。
+                                </div>
+                                <dl class="list_userbar">
+
+                                    <dt>
+                                        {# 用户头像#}
+                                        <a href="#" target="_blank" class="user_img">
+                                            <img src="https://avatar.csdn.net/2/8/D/1_gitchat.jpg" alt="GitChat"
+                                                 title="GitChat">
+                                        </a>
+                                    </dt>
+                                    <dd class="name">
+                                        <a href="#" target="_blank">GitChat技术杂谈 </a>
+                                    </dd>
+                                    <dd class="time">8天前</dd>
+
+                                    <div class="interactive floatR">
+                                        <!--阅读 begin-->
+                                        <dd class="read_num">
+                                            <a href="">
+                                                <span class="num">1452</span>
+                                                <span class="text">阅读</span>
+                                            </a>
+                                        </dd>
+                                        <!--阅读 end-->
+                                    </div>
+                                </dl>
+                                <div class="is_top"></div>
+                            </div>
+                        </li>
+                        <li class="clearfix" data-type="top" data-id="81114152" shown-time="1532694240">
+                            <div class="list_con">
+                                <div class="title">
+                                    <h2>
+                                        <a href="#" target="_blank">为什么说 NLP 将是未来数据领域的珠峰？ </a>
+                                    </h2>
+                                </div>
+                                <div class="summary oneline">
+                                    在目前的商业场中，NLP 技术用于分析源自邮件、音频、文件、网页、论坛、社交媒体中的大量半结构化和非结构化数据，市场前景巨大。
+                                </div>
+                                <dl class="list_userbar">
+
+                                    <dt>
+                                        {# 用户头像#}
+                                        <a href="#" target="_blank" class="user_img">
+                                            <img src="https://avatar.csdn.net/2/8/D/1_gitchat.jpg" alt="GitChat"
+                                                 title="GitChat">
+                                        </a>
+                                    </dt>
+                                    <dd class="name">
+                                        <a href="#" target="_blank">GitChat技术杂谈 </a>
+                                    </dd>
+                                    <dd class="time">8天前</dd>
+
+                                    <div class="interactive floatR">
+                                        <!--阅读 begin-->
+                                        <dd class="read_num">
+                                            <a href="">
+                                                <span class="num">1452</span>
+                                                <span class="text">阅读</span>
+                                            </a>
+                                        </dd>
+                                        <!--阅读 end-->
+                                    </div>
+                                </dl>
+                                <div class="is_top"></div>
+                            </div>
+                        </li>
+                        <li class="clearfix" data-type="top" data-id="81114152" shown-time="1532694240">
+                            <div class="list_con">
+                                <div class="title">
+                                    <h2>
+                                        <a href="#" target="_blank">为什么说 NLP 将是未来数据领域的珠峰？ </a>
+                                    </h2>
+                                </div>
+                                <div class="summary oneline">
+                                    在目前的商业场中，NLP 技术用于分析源自邮件、音频、文件、网页、论坛、社交媒体中的大量半结构化和非结构化数据，市场前景巨大。
+                                </div>
+                                <dl class="list_userbar">
+
+                                    <dt>
+                                        {# 用户头像#}
+                                        <a href="#" target="_blank" class="user_img">
+                                            <img src="https://avatar.csdn.net/2/8/D/1_gitchat.jpg" alt="GitChat"
+                                                 title="GitChat">
+                                        </a>
+                                    </dt>
+                                    <dd class="name">
+                                        <a href="#" target="_blank">GitChat技术杂谈 </a>
+                                    </dd>
+                                    <dd class="time">8天前</dd>
+
+                                    <div class="interactive floatR">
+                                        <!--阅读 begin-->
+                                        <dd class="read_num">
+                                            <a href="">
+                                                <span class="num">1452</span>
+                                                <span class="text">阅读</span>
+                                            </a>
+                                        </dd>
+                                        <!--阅读 end-->
+                                    </div>
+                                </dl>
+                                <div class="is_top"></div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </main>
+                <aside>
+                    <div class="slide-outer right_top" style="position:relative; z-index:998">
+                        <div class="box hot">
+                            <div adsid="home08a" class="swapbox1">
+                                <div style="width: 400px; height: 200px">
+                                    <a href="#">
+                                        <img width="400" height="200" src="{% static 'common/img/201804261745236413.jpg' %}">
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+{#                        <img src="//img-ads.csdn.net/2016/201608021757063065.png" alt="" class="icon-ad">#}
+                    </div>
+                </aside>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+{% endblock %}
+
+{% block page_script %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'common/js/csdn_feed.js' %}"></script>
+{% endblock %}
