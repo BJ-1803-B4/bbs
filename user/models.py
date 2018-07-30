@@ -21,8 +21,6 @@ class User(models.Model):
     password = models.CharField(max_length=256)
     post_count = models.IntegerField(default=0)
     comm_count = models.IntegerField(default=0)
-    follower_count = models.IntegerField(default=0)
-    following_count = models.IntegerField(default=0)
     is_delete = models.BooleanField(default=False)
 
     objects = UserManager()
